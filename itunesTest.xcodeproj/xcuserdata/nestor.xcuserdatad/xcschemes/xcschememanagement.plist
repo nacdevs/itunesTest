@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ApiManager.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>itunesTest.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>8EAC7B802655CF7600DECB2A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8EAC7B962655CF7800DECB2A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8EAC7BA12655CF7800DECB2A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8EAC7C5C2655D3B200DECB2A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

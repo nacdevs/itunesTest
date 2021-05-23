@@ -6,28 +6,30 @@
 //
 
 import XCTest
+import ApiManager
 @testable import itunesTest
 
-class itunesTestTests: XCTestCase {
+class itunesTestTests: XCTestCase,PresenterProtocol {
+    
+    var promise = XCTestExpectation()
+    func results(data: [Any]) {
+        promise.fulfill()
+    }
+    
+    func errorToUI() {
+        XCTFail()
+    }
+    
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+ 
+    func mainPresenterTest() throws {
+        promise = self.expectation(description: "Results")
+        let presenter = MainPresenter.init(presenterProtocol: self)
+        presenter.load50();
+        wait(for: [promise], timeout: 10)
+
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+   
 
 }
